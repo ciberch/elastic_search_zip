@@ -37,7 +37,7 @@
 # Node names are generated dynamically on startup, so you're relieved
 # from configuring them manually. You can tie this node to a specific name:
 #
-# node.name: "Franz Kafka"
+node.name: "Monica Dev Elastic"
 
 # Every node can be configured to allow or deny being eligible as the master,
 # and to allow or deny to store the data.
@@ -198,7 +198,7 @@
 
 # Set the bind address specifically (IPv4 or IPv6):
 #
-# network.bind_host: 192.168.0.1
+network.bind_host: ${VCAP_APP_HOST}
 
 # Set the address other nodes will use to communicate with this node. If not
 # set, it is automatically derived. It must point to an actual IP address.
@@ -207,7 +207,7 @@
 
 # Set both 'bind_host' and 'publish_host':
 #
-# network.host: 192.168.0.1
+network.host: ${VCAP_APP_HOST}
 
 # Set a custom port for the node to node communication (9300 by default):
 #
@@ -219,7 +219,7 @@
 
 # Set a custom port to listen for HTTP traffic:
 #
-# http.port: 9200
+http.port: ${VCAP_APP_PORT}
 
 # Set a custom allowed content length:
 #
