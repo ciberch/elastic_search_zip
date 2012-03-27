@@ -1,0 +1,14 @@
+[2012-03-21 11:31:27,635][INFO ][node                     ] [Solara] {0.19.1}[4942]: initializing ...
+[2012-03-21 11:31:27,641][INFO ][plugins                  ] [Solara] loaded [], sites []
+[2012-03-21 11:31:29,446][INFO ][node                     ] [Solara] {0.19.1}[4942]: initialized
+[2012-03-21 11:31:29,447][INFO ][node                     ] [Solara] {0.19.1}[4942]: starting ...
+[2012-03-21 11:31:29,536][INFO ][transport                ] [Solara] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/192.168.1.19:9300]}
+[2012-03-21 11:31:32,620][INFO ][cluster.service          ] [Solara] new_master [Solara][R9AVLTN7SmefIXlAQNPnTA][inet[/192.168.1.19:9300]], reason: zen-disco-join (elected_as_master)
+[2012-03-21 11:31:32,669][INFO ][discovery                ] [Solara] elasticsearch/R9AVLTN7SmefIXlAQNPnTA
+[2012-03-21 11:31:32,697][INFO ][http                     ] [Solara] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/192.168.1.19:9200]}
+[2012-03-21 11:31:32,698][INFO ][node                     ] [Solara] {0.19.1}[4942]: started
+[2012-03-21 11:31:32,699][INFO ][gateway                  ] [Solara] recovered [0] indices into cluster_state
+[2012-03-21 11:33:14,626][INFO ][node                     ] [Solara] {0.19.1}[4942]: stopping ...
+[2012-03-21 11:33:14,653][INFO ][node                     ] [Solara] {0.19.1}[4942]: stopped
+[2012-03-21 11:33:14,653][INFO ][node                     ] [Solara] {0.19.1}[4942]: closing ...
+[2012-03-21 11:33:14,661][INFO ][node                     ] [Solara] {0.19.1}[4942]: closed
