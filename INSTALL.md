@@ -32,3 +32,52 @@ To deploy Elastic Search on Cloud Foundry
 
 Manifest will take care of generating a unique name for your app.
 And you are ready to use elastic search over HTTP at the url generated.
+
+## Testing from bash
+
+``` bash
+
+/* Put here the proper app url you generated  */
+export APP_URL=search-95c3e.appcloud20.dev.mozycloud.com
+
+/* Add data */
+curl -XPUT http://$APP_URL/twitter/user/kimchy -d '{
+    "name" : "Shay Banon"
+}'
+
+curl -XPUT http://$APP_URL/twitter/tweet/1 -d '{
+    "user": "kimchy",
+    "post_date": "2009-11-15T13:12:00",
+    "message": "Trying out elasticsearch, so far so good?"
+}'
+
+curl -XPUT http://$APP_URL/twitter/tweet/2 -d '{
+    "user": "kimchy",
+    "post_date": "2009-11-15T14:12:12",
+    "message": "You know, for Search"
+}'
+
+/* Get Data */
+curl -XGET http://$APP_URL/twitter/tweet/2
+
+/* Test Search */
+curl -XGET http://$APP_URL/twitter/tweet/_search?q=user:kimchy
+
+curl -XGET http://$APP_URL/twitter/tweet/_search -d '{
+    "query" : {
+        "term" : { "user": "kimchy" }
+    }
+}'
+
+curl -XGET http://$APP_URL/twitter/_search?pretty=true -d '{
+    "query" : {
+        "range" : {
+            "post_date" : {
+                "from" : "2009-11-15T13:00:00",
+                "to" : "2009-11-15T14:30:00"
+            }
+        }
+    }
+}'
+
+```
