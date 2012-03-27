@@ -1,7 +1,7 @@
 --- 
 applications: 
   .: 
-    name: elastic
+    name: search-${random-word}
     instances: 1
     framework: 
       name: standalone
@@ -10,6 +10,6 @@ applications:
         description: Standalone Application
         mem: 64M
     command: bin/elasticsearch -f
-    url: elastic.appcloud20.dev.mozycloud.com
     runtime: java
+    url: ${name}.${target-base}
     mem: 1G
