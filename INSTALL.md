@@ -9,6 +9,8 @@ To deploy Elastic Search on Cloud Foundry
 - Install vmc `gem install vmc --pre` (Standalone apps require version >= vmc 0.3.16.beta.4)
 - Log into a Cloud Foundry instance that has standalone apps enabled
 - Push your app
+ 
+``` bash
   $ vmc push
     Would you like to deploy from the current directory? [Yn]: Y
     Pushing application 'search-95c3e'...
@@ -29,6 +31,8 @@ To deploy Elastic Search on Cloud Foundry
   +--------------+----+---------+-------------------------------------------+----------+
   | search-95c3e | 1  | RUNNING | search-95c3e.appcloud20.dev.mozycloud.com |          |
   +--------------+----+---------+-------------------------------------------+----------+
+  
+```
 
 Manifest will take care of generating a unique name for your app.
 And you are ready to use elastic search over HTTP at the url generated.
