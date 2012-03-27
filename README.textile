@@ -1,3 +1,13 @@
+h1. Elastic Search on Cloud Foundry
+
+Cloud Foundry version of Elastic search using stand alone apps.
+
+This repo shows:
+
+* How to configure manifest.yml to deploy as a standalone app
+* How to edit config/elasticsearch.yml to use the Cloud Foundry environment
+
+
 h1. ElasticSearch
 
 h2. A Distributed RESTful Search Engine
